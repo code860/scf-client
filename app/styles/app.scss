@@ -1,0 +1,16 @@
+
+html,
+body,
+.ember-view
+
+.main {
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  flex-basis: auto;
+  flex-grow: 2;
+  flex-shrink: 0;
+  min-height: calc(100vh - 70px);
+  position: relative;
+}
