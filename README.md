@@ -1,6 +1,6 @@
 # Scf-client
   
-  * Front End COmponent for Rails JSON api. Simply go to http://localhost:4200 and enter a user name and a repository and click search. It will then render a table of result on the bottom.
+  * Front End Component for Rails JSON api. Simply go to http://localhost:4200 and enter a user name and a repository and click search. It will then render a table of result on the bottom.
   
   * Rails Api is <a href='https://github.com/code860/scf-api'> Here </a> 
 
