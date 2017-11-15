@@ -1,7 +1,12 @@
 # Scf-client
+  
+  * Front End COmponent for Rails JSON api. Simply go to http://localhost:4200 and enter a user name and a repository and click search. It will then render a table of result on the bottom.
+  
+  * Rails Api is <a href='https://github.com/code860/scf-api'> Here </a> 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+
+Leaving the Default Ember Readme here just in case...
 
 ## Prerequisites
 
