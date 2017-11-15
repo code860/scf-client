@@ -1,17 +1,17 @@
-<div style="height: 50%; width:50%">
+<div class='center' style="height: 50%; width:50%">
   <h4> Search For Git Events! </h4>
-  <div>
+  <div class='wrapper'>
     <div class='row' style="padding-bottom: 10px;">
       <div class="col-xs-10 col-md-6">
-        {{input value=userNameQuery class="form-control" placeholder="git username" enter="search" disabled=isSearching required=true}}
+        {{input value=userNameQuery class="form-control" placeholder="git username"}}
       </div>
       <div class="col-xs-10 col-md-6">
-        {{input value=userNameQuery class="form-control" placeholder="git username" enter="search" disabled=isSearching required=true}}
+        {{input value=repoNameQuery class="form-control" placeholder="git repo name"}}
       </div>
     </div>
-    <button class="btn btn-lg">
-      Search
-    </button>
+    <div class='pull-right row'>
+      <button {{action "search"}} class="btn btn-lg"> Search</button>
+      <button {{action "clear"}} class="btn btn-lg">Clear</button>
+    </div>
   </div>
-  {{yield}}
 </div>

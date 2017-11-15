@@ -1,0 +1,26 @@
+<div class="top-spacer">
+  {{#if filteredEventsList}}
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Invoice Number</th>
+              <th>Application Number</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each filteredEventsList as |event|}}
+              <tr>
+                <td>{{transaction.uid}}</td>
+                <td>{{transaction.itemNumber}}</td>
+                <td>{{format-currency-symbols transaction.feeTotal}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {{/if}}
+</div>

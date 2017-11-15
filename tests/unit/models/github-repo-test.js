@@ -6,7 +6,7 @@ moduleForModel('github-repo', 'Unit | Model | github repo', {
 });
 
 test('it exists', function(assert) {
-  let model = this.subject();
+  const githubRepo = this.store().modelFor('github-repo');
   // let store = this.store();
-  assert.ok(!!model);
+  assert.ok(!!githubRepo);
 });
