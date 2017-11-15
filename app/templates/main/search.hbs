@@ -22,6 +22,8 @@
   {{#if model.events}}
     <div class='wrapper'>
       {{event-list
+        model=model
+        eventTypesList=eventTypesList
         filteredEventsList=model.events}}
     </div>
   {{/if}}

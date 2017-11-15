@@ -1,4 +1,11 @@
 <div class="top-spacer">
+  {{#if eventTypesList}}
+    <select onchange={{action "setSelection" value="target.value"}}>
+      {{#each eventTypesList as |eventType|}}
+        <option value={{eventType}} selected={{selectedEventType}}>{{eventType}}</option>
+      {{/each}}
+    </select>
+  {{/if}}
   {{#if filteredEventsList}}
     <div class="row">
       <div class="col-xs-12">

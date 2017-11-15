@@ -23,8 +23,23 @@ export default Ember.Route.extend({
       return {};
     }
   },
+  afterModel(model){
+    var _this = this;
+    if(model.events){
+      let eventTypes = [],
+          uniqueEventTypes = [];
+      model.events.forEach(function(evt){
+        eventTypes.push(evt.get('eventType'));
+      });
+      uniqueEventTypes = eventTypes.filter(function(item, index){
+        return eventTypes.indexOf(item) == index;
+      });
+      _this.set('eventTypes', uniqueEventTypes);
+    }
+  },
   setupController(controller, model) {
     this._super(controller, model);
+    controller.set('eventTypesList', this.get("eventTypes"));
     controller.set('errorMsg', model.errorMsg);
   }
 });
