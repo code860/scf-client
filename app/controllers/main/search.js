@@ -12,11 +12,12 @@ export default Ember.Controller.extend({
       this.set('gitRepo', this.get('repoNameQuery'));
     },
     clear(){
-      // Clears all results and seacrh queires
-      this.set('gitUser', null);
+      // Clears all results and search queires
+      this.set('gitUser', '');
       this.set('userNameQuery', null);
-      this.set('gitRepo', null);
+      this.set('gitRepo', '');
       this.set('repoNameQuery', null);
+      this.set('errorMsg', "");
     }
   }
 });

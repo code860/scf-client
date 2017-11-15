@@ -9,9 +9,20 @@
         {{input value=repoNameQuery class="form-control" placeholder="git repo name"}}
       </div>
     </div>
+    <div class='row'>
+      <div class="col-xs-10 col-md-6">
+        <h4>{{errorMsg}}</h4>
+      </div>
+    </div>
     <div class='pull-right row'>
       <button {{action "search"}} class="btn btn-lg"> Search</button>
       <button {{action "clear"}} class="btn btn-lg">Clear</button>
     </div>
   </div>
+  {{#if model.events}}
+    <div class='wrapper'>
+      {{event-list
+        filteredEventsList=model.events}}
+    </div>
+  {{/if}}
 </div>

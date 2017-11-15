@@ -2,5 +2,5 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   filteredEventsList: null,
-  eventTypesLis: null
+  eventTypesList: null
 });

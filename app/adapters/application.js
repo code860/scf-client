@@ -15,6 +15,6 @@ export default JSONAPIAdapter.extend({
       //handles error messages to set the meta tag in the response
       return new DS.AdapterError(payload.meta['error-msg']);
     }
-    return this._super(status, headers, payload, requestData)
+    return this._super(status, headers, payload, requestData);
   }
 });

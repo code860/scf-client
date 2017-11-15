@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     let userName = params.gitUser,
         repoName = params.gitRepo;
     // We want both query paramters present before we call rails
-    if(userName && repoName){
+    if(userName  && repoName){
       return Ember.RSVP.hash({
         events: this.store.query('github-event', {username: userName, repo: repoName})
       }).catch(function(adapterError){
@@ -25,7 +25,6 @@ export default Ember.Route.extend({
   },
   setupController(controller, model) {
     this._super(controller, model);
-    controller.set('errorMsg', model.errorMsg)
-    controller.set("filteredEventsList", model.events);
+    controller.set('errorMsg', model.errorMsg);
   }
 });

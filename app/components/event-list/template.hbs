@@ -5,17 +5,27 @@
         <table class="table table-hover table-striped">
           <thead>
             <tr>
-              <th>Invoice Number</th>
-              <th>Application Number</th>
-              <th>Total</th>
+              <th>Event Type</th>
+              <th>Created At</th>
+              <th>User</th>
+              <th>Repo</th>
             </tr>
           </thead>
           <tbody>
             {{#each filteredEventsList as |event|}}
               <tr>
-                <td>{{transaction.uid}}</td>
-                <td>{{transaction.itemNumber}}</td>
-                <td>{{format-currency-symbols transaction.feeTotal}}</td>
+                <td>{{event.eventType}}</td>
+                <td>{{moment-format event.createdAt "DD MMMM YYYY HH:mm"}}</td>
+                {{#if event.hasUserName}}
+                  <td>
+                    <a href={{event.userGithubLink}} target="_blank" >
+                      {{event.userName}}
+                    </a>
+                  </td>
+                {{else}}
+                  <td></td>
+                {{/if}}
+                <td>{{event.repoName}}</td>
               </tr>
             {{/each}}
           </tbody>
